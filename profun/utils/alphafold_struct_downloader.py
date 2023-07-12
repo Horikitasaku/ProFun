@@ -53,12 +53,10 @@ if __name__ == "__main__":
                 for ver in ['v3','v2','v1']:
                     if requests.get(f"https://alphafold.ebi.ac.uk/files/AF-{uniprot_id}-F1-model_{ver}.pdb").ok:
                         URL = f"https://alphafold.ebi.ac.uk/files/AF-{uniprot_id}-F1-model_{ver}.pdb"
-                        response = requests.get(URL)
-            else:
-                response = requests.get(URL)
-            if response:
-                with open(root_af / f"{uniprot_id}.pdb", "wb") as file:
-                    file.write(response.content)
+
+            response = requests.get(URL)
+            with open(root_af / f"{uniprot_id}.pdb", "wb") as file:
+                file.write(response.content)
         except:
             logger.warning(f"Error downloading AlphaFold2 structure for {uniprot_id}")
 
