@@ -1,0 +1,6 @@
+pandas
+numpy
+dataclasses_json
+scikit-learn
+iterative-stratification
+scikit-optimize

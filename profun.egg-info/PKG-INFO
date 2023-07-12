@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: profun
+Version: 0.1
+Summary: Library for protein function prediction
+Author: Raman Samusevich
+Author-email: raman.samusevich@gmail.com
+License: MIT
